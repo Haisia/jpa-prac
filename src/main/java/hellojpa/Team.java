@@ -1,6 +1,7 @@
 package hellojpa;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,11 @@ public class Team {
   @Column(name = "TEAM_ID")
   private Long id;
   private String name;
+
+  private String createdBy;
+  private LocalDateTime createdDate;
+  private String lastModifiedBy;
+  private LocalDateTime lastModifiedDate;
 
   @OneToMany
   @JoinColumn(name = "TEAM_ID")
